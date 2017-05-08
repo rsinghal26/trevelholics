@@ -1,0 +1,17 @@
+{
+	"manifest_version": 2,
+	"name": "TravelAholics",
+	"version": "2.0",
+	"description": "Chrome extension to book tickets online on just a click.",
+	"permissions": ["http://*.triphobo.com/tripplans*"],
+	"background":
+	{
+	    "scripts": ["jquery-3.2.1.min.js"]
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://*.triphobo.com/tripplans/*"],
+			"js": ["jquery-3.2.1.min.js","content.js"]
+		}
+	]
+}
